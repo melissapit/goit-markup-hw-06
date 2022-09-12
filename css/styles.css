@@ -173,7 +173,9 @@ img {
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/bkg.jpg);
-  background-size: cover;
+  background-size: 1600px;
+  background-repeat: no-repeat;
+  background-position: center;
 
   padding-top: 200px;
   padding-bottom: 200px;
@@ -503,19 +505,21 @@ address {
   margin-left: auto;
 }
 .subscribe-form {
-  align-items: baseline;
-  width: 582px;
-  min-height: 86px;
+  display: flex;
+  align-items: center;
   padding: 0;
 }
 .email-input {
+  display: block;
   background-color: transparent;
   width: 358px;
   height: 50px;
   border: 1px solid var(--borderform);
   border-radius: 4px;
-  margin-right: 12px;
   padding-left: 16px;
+}
+.footer-form-input {
+  margin-right: 12px;
 }
 .email-input::placeholder {
   color: var(--contacts-color);
@@ -685,7 +689,7 @@ address {
 .modal {
   position: absolute;
   width: 528px;
-  height: 581px;
+  min-height: 581px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -754,6 +758,8 @@ address {
 .modal-form-input-wrapper {
   position: relative;
   display: block;
+}
+.modal-form-field {
   margin-bottom: 10px;
 }
 .modal-form-input-icon {
@@ -774,8 +780,10 @@ address {
   transition: border-color var(--transition);
   padding: 12px 16px;
   resize: none;
-  margin-bottom: 20px;
   transition: border-color var(--transition);
+}
+.modal-form-field-message {
+  margin-bottom: 20px;
 }
 .modal-form-message:focus {
   outline: none;
